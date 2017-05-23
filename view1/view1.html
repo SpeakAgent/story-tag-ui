@@ -1,0 +1,37 @@
+<div class="container">
+
+	<div class="row" id="header">
+	</div>
+
+	<div class="row" id="body">
+		<div class="col-md-2" id="sidebar">
+		</div>
+		<div class="col-md-10" id="gamewell">
+				<div class="" id="students">
+					<slick infinite=true slides-to-show=6 slides-to-scroll=3>
+						<div ng-repeat="student in students" class="student">
+							{{ student }}
+							</div>
+					</slick>
+				</div>
+				<div class="" id="sentence-form">
+					<h2>Blah blah blah make words</h2>
+					<input type="text" class="form-control">
+					<button type="button" class="btn btn-default btn-md">
+  					<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> 
+				</button>
+				</div>
+				<div class="col-md-6" id="story">
+					<div ng-repeat="sentence in sentences" class="sentence">
+						<div class="sent-symbol"></div>{{ sentence }}
+					</div>
+				</div>
+				<div class="col-md-6" id="words">
+					<div ng-repeat="word in words track by $index" class="word text-center">
+						<div class="symbol"></div>
+						<span class="word-text">{{ word }}</span>
+				</div>
+		</div>
+	</div>
+
+</div>
